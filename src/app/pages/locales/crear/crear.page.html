@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>crear</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="fixed">Nombres:</ion-label>
+    <ion-input [(ngModel)]="local.nombre"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item>
+   <ion-label position="fixed">Telefono:</ion-label>
+   <ion-input [(ngModel)]="local.telefono"></ion-input>
+ </ion-item>
+ <br>
+ <ion-item>
+   <ion-label position="fixed">Direccion:</ion-label>
+   <ion-input [(ngModel)]="local.direccion"></ion-input>
+ </ion-item>
+ <br>
+ <ion-item>
+  <ion-label position="fixed">Correo:</ion-label>
+  <ion-input [(ngModel)]="local.correo"></ion-input>
+</ion-item>
+<br>
+ <!-- Icons -->
+ <ion-item>
+   <ion-button (click)="guardar()">
+     <ion-icon slot="icon-only" name="save" ></ion-icon>
+     
+   </ion-button>
+ </ion-item>
+
+ <ion-item>
+   <ion-button>
+     <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+   </ion-button>
+ </ion-item>
+ <ups-demo icon="alarm-outline" (updateData)="update($event)"></ups-demo>
+ {{contador}}
+
+</ion-content>
